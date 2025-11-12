@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zetx Game - Агрегатор игр</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <h1>Zetx Game</h1>
+                    <span>Агрегатор игр</span>
+                </a>
+            </div>
+            <nav class="nav">
+                <a href="#games" class="nav-link">Игры</a>
+                <a href="#about" class="nav-link">О проекте</a>
+                <button id="open-add-game" class="btn btn-small btn-secondary">Добавить игру</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Герой секция -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Откройте мир удивительных игр</h2>
+                <p class="hero-description">Найдите свою следующую любимую игру или поделитесь своим творением с миром. Тысячи игр ждут вас!</p>
+                <div class="hero-buttons">
+                    <a href="#games" class="btn btn-primary">Смотреть игры</a>
+                    <button id="open-add-game-hero" class="btn btn-secondary">Добавить игру</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="game-preview">
+                    <div class="game-card featured">
+                        <div class="game-image">
+                            <img src="https://gameforstore.hb.ru-msk.vkcloud-storage.ru/mem%20clicker/%D0%BE%D0%B1%D0%BB%D0%BE%D1%88%D0%BA%D0%B0%20ya.png" alt="Игра месяца">
+                        </div>
+                        <div class="game-info">
+                            <h3>Mem clicker</h3>
+                            <p>Mem clicker - кликер игра где собраны популярные новые и старые мемы</p>
+                            <a href="game.html?id=1" class="btn btn-small">Играть</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция с играми -->
+    <section id="games" class="games-section">
+        <div class="container">
+            <h2 class="section-title">Популярные игры</h2>
+            <p class="section-description">Откройте для себя лучшие игры от талантливых разработчиков со всего мира</p>
+            
+            <div class="games-filter">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="action">Экшен</button>
+                <button class="filter-btn" data-filter="strategy">Стратегии</button>
+                <button class="filter-btn" data-filter="puzzle">Головоломки</button>
+                <button class="filter-btn" data-filter="adventure">Приключения</button>
+                <button class="filter-btn" data-filter="rpg">RPG</button>
+                <button class="filter-btn" data-filter="arcade">Аркады</button>
+                <button class="filter-btn" data-filter="simulation">Симулятор</button>
+                <button class="filter-btn" data-filter="sports">Спорт</button>
+                <button class="filter-btn" data-filter="racing">Гонки</button>
+                <button class="filter-btn" data-filter="horror">Хоррор</button>
+                <button class="filter-btn" data-filter="casual">Казуальная</button>
+
+            </div>
+            
+            <div class="games-grid" id="games-container">
+                <!-- Игры будут загружены через JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция о проекте -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">О проекте Zetx Game</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Zetx Game - это современный агрегатор игр, созданный для объединения разработчиков и игроков со всего мира. Наша платформа предоставляет уникальную возможность независимым разработчикам представить свои проекты широкой аудитории.</p>
+                    <p>Мы верим, что каждый талантливый разработчик заслуживает признания, а каждый игрок - возможности найти свою идеальную игру.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <h3>🎮 Для игроков</h3>
+                            <p>Откройте для себя уникальные игры разных жанров, которые вы не найдете в крупных магазинах. Все игры проходят модерацию для обеспечения качества.</p>
+                        </div>
+                        <div class="feature">
+                            <h3>👨‍💻 Для разработчиков</h3>
+                            <p>Представьте свою игру миллионам потенциальных игроков. Получайте обратную связь и находите свою аудиторию без сложных процессов публикации.</p>
+                        </div>
+                        <div class="feature">
+                            <h3>🌍 Сообщество</h3>
+                            <p>Присоединяйтесь к растущему сообществу энтузиастов игр. Обсуждайте, делитесь опытом и находите единомышленников.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Zetx Game</h3>
+                    <p>Агрегатор игр для разработчиков и игроков</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#games">Игры</a>
+                    <a href="#about">О проекте</a>
+                    <button id="open-add-game-footer" class="footer-add-btn">Добавить игру</button>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>2025 Zetx Game. Сделано с ❤️ для геймеров</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для добавления игры -->
+    <div id="add-game-modal" class="modal">
+        <div class="modal-content large">
+            <span class="close">&times;</span>
+            <h2 class="modal-title">Добавить свою игру</h2>
+            <p class="modal-description">Заполните форму ниже, чтобы добавить свою игру в каталог Zetx Game(ссылки на скриншоты и облошку должны быть от яндекс диска или гугл диска)</p>
+            
+            <!-- Предупреждение для ПК -->
+            <div class="form-warning info desktop-warning">
+                <div class="warning-icon">💻</div>
+                <div class="warning-content">
+                    <div class="warning-title">Рекомендации для ПК</div>
+                    <div>Для лучшего отображения используйте скриншоты с соотношением 16:9 (1920×1080)</div>
+                </div>
+            </div>
+            
+            <!-- Предупреждение для мобильных -->
+            <div class="form-warning info mobile-warning">
+                <div class="warning-icon">📱</div>
+                <div class="warning-content">
+                    <div class="warning-title">Рекомендации для мобильных</div>
+                    <div>Для лучшего отображения используйте скриншоты с соотношением 9:16 (1080×1920)</div>
+                </div>
+            </div>
+            
+            <form id="game-form" class="game-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="dev-email">Email разработчика *</label>
+                        <input type="email" id="dev-email" name="dev-email" required placeholder="your@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="game-title">Название игры *</label>
+                        <input type="text" id="game-title" name="game-title" required placeholder="Введите название игры">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="game-description">Описание игры *</label>
+                    <textarea id="game-description" name="game-description" rows="4" required placeholder="Опишите вашу игру, её особенности, геймплей..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Платформа игры *</label>
+                    <div class="platform-selection">
+                        <div class="platform-option">
+                            <input type="radio" id="platform-pc" name="platform" value="pc" required>
+                            <label for="platform-pc">
+                                <span class="platform-icon-large">💻</span>
+                                <span class="platform-name">ПК</span>
+                                <span class="platform-description">Компьютер</span>
+                            </label>
+                        </div>
+                        <div class="platform-option">
+                            <input type="radio" id="platform-mobile" name="platform" value="mobile" required>
+                            <label for="platform-mobile">
+                                <span class="platform-icon-large">📱</span>
+                                <span class="platform-name">Мобильная</span>
+                                <span class="platform-description">Телефон/Планшет</span>
+                            </label>
+                        </div>
+                        <div class="platform-option">
+                            <input type="radio" id="platform-all" name="platform" value="all" required>
+                            <label for="platform-all">
+                                <span class="platform-icon-large">🌐</span>
+                                <span class="platform-name">Все платформы</span>
+                                <span class="platform-description">Кроссплатформенная</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="game-url">Ссылка на игру *</label>
+                        <input type="url" id="game-url" name="game-url" required placeholder="https://example.com/game">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="icon-url">Ссылка на обложку игры *</label>
+                        <input type="url" id="icon-url" name="icon-url" required placeholder="https://example.com/cover.jpg">
+                        <div class="image-requirements">
+                            <div class="requirement-item">
+                                <span class="requirement-icon">📐</span>
+                                <span>Рекомендуемый размер: 800×470 пикселей</span>
+                            </div>
+                            <div class="requirement-item">
+                                <span class="requirement-icon">⚖️</span>
+                                <span>Соотношение сторон: 16:9</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="screenshots-url">Ссылки на скриншоты *</label>
+                    <textarea id="screenshots-url" name="screenshots-url" rows="3" required placeholder="https://example.com/screen1.jpg, https://example.com/screen2.jpg, https://example.com/screen3.jpg"></textarea>
+                    <small>Укажите ссылки на скриншоты через запятую. Минимум 2 скриншота.</small>
+                    <div class="image-requirements">
+                        <div class="requirement-item desktop-warning">
+                            <span class="requirement-icon">💻</span>
+                            <span>Для ПК: 1920×1080 (16:9)</span>
+                        </div>
+                        <div class="requirement-item mobile-warning">
+                            <span class="requirement-icon">📱</span>
+                            <span>Для мобильных: 1080×1920 (9:16)</span>
+                        </div>
+                        <div class="requirement-item">
+                            <span class="requirement-icon">📷</span>
+                            <span>Форматы: JPG, PNG, WebP</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Динамические предупреждения для скриншотов -->
+                <div class="screenshot-warning mobile">
+                    📱 <strong>Для мобильной игры:</strong> Рекомендуем скриншоты 1080×1920 (вертикальные)
+                </div>
+                <div class="screenshot-warning pc">
+                    💻 <strong>Для ПК игры:</strong> Рекомендуем скриншоты 1920×1080 (горизонтальные)
+                </div>
+                <div class="screenshot-warning all">
+                    🌐 <strong>Для кроссплатформенной игры:</strong> Добавьте скриншоты для разных платформ
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="donation-url">html код сбора денег для поддержки разработчика (например от юмани)</label>
+                        <input type="url" id="donation-url" name="donation-url" placeholder="Html код">
+                        <small>Необязательное поле</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="game-category">Жанр игры *</label>
+                        <select id="game-category" name="game-category" required>
+                            <option value="">Выберите жанр</option>
+                            <option value="action">🎮 Экшен</option>
+                            <option value="strategy">♟️ Стратегия</option>
+                            <option value="puzzle">🧩 Головоломка</option>
+                            <option value="adventure">🗺️ Приключение</option>
+                            <option value="arcade">🎯 Аркада</option>
+                            <option value="rpg">⚔️ RPG</option>
+                            <option value="simulation">🏗️ Симулятор</option>
+                            <option value="sports">⚽ Спорт</option>
+                            <option value="racing">🏎️ Гонки</option>
+                            <option value="horror">👻 Хоррор</option>
+                            <option value="casual">😊 Казуальная</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-warning warning">
+                    <div class="warning-icon">⚠️</div>
+                    <div class="warning-content">
+                        <div class="warning-title">Внимание!</div>
+                        <div>Проверьте правильность всех ссылок перед отправкой. Неправильные ссылки могут привести к отклонению заявки. После отправки мы свяжемся с вами по email в течение 2-3 рабочих дней.</div>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" id="close-add-game" class="btn btn-secondary">Отмена</button>
+                    <button type="submit" class="btn btn-primary">Отправить игру</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Уведомление -->
+    <div id="notification" class="notification"></div>
+
+   <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "ZNZcmZKIeCBBhZk5n",
+      });
+   })();
+</script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,891 @@
+:root {
+    --primary: #1a237e;
+    --secondary: #283593;
+    --accent: #3949ab;
+    --light: #e8eaf6;
+    --dark: #0d1435;
+    --text: #ffffff;
+    --shadow: rgba(26, 35, 126, 0.3);
+    --success: #4caf50;
+    --error: #f44336;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+.header {
+    background-color: var(--primary);
+    box-shadow: 0 4px 12px var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #ffffff, #bbdefb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 5px;
+}
+
+.logo span {
+    font-size: 0.9rem;
+    color: #bbdefb;
+}
+
+.nav {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #bbdefb;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #bbdefb;
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Основной контент */
+.main-content {
+    flex: 1;
+    padding: 40px 0;
+}
+
+/* Герой секция */
+.hero {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #e3f2fd;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.game-preview {
+    perspective: 1000px;
+}
+
+.game-card.featured {
+    background: var(--secondary);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px var(--shadow);
+    transform: rotateY(-5deg) rotateX(5deg);
+    transition: transform 0.5s;
+}
+
+.game-card.featured:hover {
+    transform: rotateY(0) rotateX(0);
+}
+
+.game-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.game-info {
+    padding: 20px;
+}
+
+.game-info h3 {
+    margin-bottom: 10px;
+}
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: var(--text);
+}
+
+.btn-primary:hover {
+    background: #303f9f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--text);
+    border: 2px solid var(--accent);
+}
+
+.btn-secondary:hover {
+    background: var(--accent);
+    transform: translateY(-2px);
+}
+
+.btn-small {
+    color: #e8eaf6;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+}
+
+.btn-large {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+}
+
+/* Секции */
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--accent);
+}
+
+.section-description {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #e3f2fd;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.games-section, .about-section {
+    padding: 80px 0;
+}
+
+.about-section {
+    background: rgba(13, 20, 53, 0.7);
+}
+
+/* Фильтр игр */
+.games-filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--accent);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background: var(--accent);
+}
+
+/* Сетка игр */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.game-card {
+    background: var(--secondary);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px var(--shadow);
+}
+
+.game-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.game-card-content {
+    padding: 20px;
+}
+
+.game-card-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.game-card-description {
+    color: #e3f2fd;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.game-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-card-category {
+    background: var(--primary);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+/* Секция о проекте */
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature {
+    background: var(--secondary);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px var(--shadow);
+}
+
+.feature h3 {
+    color: #bbdefb;
+    margin-bottom: 15px;
+}
+
+/* ФОРМА ДОБАВЛЕНИЯ ИГРЫ - ИСПРАВЛЕННАЯ */
+.game-form {
+    max-width: 100%;
+    color: var(--text);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.form-group input, 
+.form-group textarea, 
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text);
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus, 
+.form-group select:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 2px rgba(57, 73, 171, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-group small {
+    display: block;
+    margin-top: 5px;
+    color: #bbdefb;
+    font-size: 0.8rem;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Стили для выпадающего списка */
+.form-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    cursor: pointer;
+}
+
+.form-group select option {
+    background: var(--secondary);
+    color: var(--text);
+    padding: 12px;
+    border: none;
+}
+
+.form-group select option:checked {
+    background: var(--accent);
+    color: var(--text);
+}
+
+/* Кнопки формы */
+.form-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.form-actions .btn {
+    min-width: 120px;
+    flex-shrink: 0;
+}
+
+/* Футер */
+.footer {
+    background: var(--dark);
+    padding: 40px 0 20px;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.footer-logo h3 {
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.footer-links a {
+    color: #bbdefb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--text);
+}
+
+.footer-add-btn {
+    background: none;
+    border: none;
+    color: #bbdefb;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.footer-add-btn:hover {
+    color: var(--text);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #bbdefb;
+}
+
+/* Модальные окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: var(--secondary);
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    animation: modalFade 0.3s;
+}
+
+.modal-content.large {
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+@keyframes modalFade {
+    from {opacity: 0; transform: translateY(-50px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+    line-height: 1;
+}
+
+.close:hover {
+    color: #bbdefb;
+}
+
+.modal-title {
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--text);
+    font-size: 1.8rem;
+}
+
+.modal-description {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #bbdefb;
+    font-size: 1rem;
+}
+
+/* Уведомление */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 6px;
+    color: white;
+    font-weight: 500;
+    z-index: 1001;
+    transform: translateX(150%);
+    transition: transform 0.3s;
+}
+
+.notification.show {
+    transform: translateX(0);
+}
+
+.notification.success {
+    background: var(--success);
+}
+
+.notification.error {
+    background: var(--error);
+}
+
+/* Сообщение об отсутствии игр */
+.no-games {
+    text-align: center;
+    grid-column: 1 / -1;
+    padding: 40px;
+    color: #bbdefb;
+    font-size: 1.1rem;
+}
+
+/* Стили для детальной страницы игры */
+.game-detail {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.game-cover {
+    margin-bottom: 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px var(--shadow);
+}
+
+.game-cover img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.game-main-info {
+    background: var(--secondary);
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px var(--shadow);
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.game-title {
+    font-size: 2.5rem;
+    margin: 0;
+    color: var(--text);
+}
+
+.game-meta {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.game-category, .game-platform, .game-developer {
+    background: var(--primary);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.game-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    color: #e3f2fd;
+}
+
+.game-actions {
+    text-align: center;
+}
+
+.game-screenshots {
+    margin-bottom: 30px;
+}
+
+.game-screenshots h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: var(--text);
+}
+
+.screenshots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.screenshot-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px var(--shadow);
+    transition: transform 0.3s;
+}
+
+.screenshot-item:hover {
+    transform: translateY(-5px);
+}
+
+.screenshot-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.donation-panel {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px var(--shadow);
+}
+
+.donation-panel h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.donation-panel p {
+    margin-bottom: 20px;
+    color: #e3f2fd;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .games-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .modal-content {
+        padding: 20px;
+        margin: 10% auto;
+        width: 95%;
+    }
+    
+    .modal-content.large {
+        margin: 5% auto;
+    }
+    
+    /* Адаптивность формы */
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .form-actions .btn {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .features {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Адаптивность детальной страницы */
+    .game-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .game-title {
+        font-size: 2rem;
+    }
+    
+    .game-cover img {
+        height: 250px;
+    }
+    
+    .screenshots-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .screenshot-item img {
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .games-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .game-card-content {
+        padding: 15px;
+    }
+    
+    .modal-title {
+        font-size: 1.5rem;
+    }
+    
+    .screenshots-grid {
+        gap: 10px;
+    }
+    
+    .screenshot-item img {
+        height: 150px;
+    }
+    
+    .game-cover img {
+        height: 200px;
+    }
+}
+
+/* Дополнительные исправления для формы */
+.form-group input[type="url"],
+.form-group input[type="email"],
+.form-group input[type="text"] {
+    font-family: inherit;
+}
+
+.form-group textarea {
+    font-family: inherit;
+    line-height: 1.5;
+}
+
+/* Убираем стандартные стили для number input */
+.form-group input[type="number"]::-webkit-outer-spin-button,
+.form-group input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.form-group input[type="number"] {
+    -moz-appearance: textfield;
+}
