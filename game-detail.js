@@ -91,6 +91,29 @@ const allGamesData = {
     ],
  developer: "Browserplay",
     landscapeScreenshots: true, // Портретные скриншоты
+},
+6:{
+
+ id: 6,
+    title: "Black Horror",
+    description: "Игра в жанре хоррор в полуоткрытом мире, где нужно уничтожить монстриков и спастись самому.",
+    category: "horror",
+    platform: "pc",
+    image: "https://developers.vkplay.ru/hotbox/showcase/gamelocale/picture/01d966f9-5024-4cea-a766-e4f736b96c16.jpg",
+    url: "https://vkplay.ru/play/game/black-horror/?mt_link_id=p0gtr6",
+    icon: "https://gameforstore.hb.ru-msk.vkcloud-storage.ru/mem%20clicker/ikonka.jpg",
+    screenshots: [
+        "https://vkplay.ru/hotbox/showcase/gamehighlight/pic/acc6192f-498a-4876-b19f-fe7a1bc9bd1c.png",
+        "https://vkplay.ru/hotbox/showcase/gamehighlight/pic/1a274927-79f9-4e46-9dc7-459b884011d9.png",
+        "https://vkplay.ru/hotbox/showcase/gamehighlight/pic/055417d7-a138-4db8-b89f-6e1695767252.png",
+        "https://vkplay.ru/hotbox/showcase/gamehighlight/pic/aaeb20d8-a0f0-4348-a03a-7873c950b380.png"
+
+
+    ],
+ developer: "Browserplay",
+    landscapeScreenshots: true, // Портретные скриншоты
+    donationIframe: '<iframe src="https://yoomoney.ru/quickpay/fundraise/button?billNumber=145K4U2FG4A.240723&" width="330" height="50" frameborder="0" allowtransparency="true" scrolling="no"></iframe>'
+
 }
 
 };
@@ -141,6 +164,7 @@ function loadGameDetails() {
                 
                 <p class="game-description">${game.description || 'Описание отсутствует'}</p>
                 
+                
                 <!-- Кнопка перейти к игре -->
                 <div class="game-actions">
                     <a href="${game.url || '#'}" target="_blank" class="btn btn-primary btn-large">
@@ -186,7 +210,9 @@ function getCategoryName(categoryKey) {
         'rpg': 'RPG',
         'simulation': 'Симулятор',
         'sports': 'Спорт',
-        'casual': 'Казуальная'
+        'casual': 'Казуальная',
+        'horror': 'Хоррор'
+
     };
     return categories[categoryKey] || 'Другое';
 }

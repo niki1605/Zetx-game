@@ -81,6 +81,25 @@ const gamesData = [
 
     ]
     
+},
+     {
+    id: 6,
+    title: "Black Horror",
+    description: "Игра в жанре хоррор в полуоткрытом мире, где нужно уничтожить монстриков и спастись самому.",
+    category: "horror",
+    platform: "pc",
+    image: "https://developers.vkplay.ru/hotbox/showcase/gamelocale/picture/01d966f9-5024-4cea-a766-e4f736b96c16.jpg",
+    url: "https://vkplay.ru/play/game/black-horror/?mt_link_id=p0gtr6",
+    icon: "https://gameforstore.hb.ru-msk.vkcloud-storage.ru/mem%20clicker/ikonka.jpg",
+    screenshots: [
+        "https://vkplay.ru/hotbox/showcase/gamehighlight/pic/acc6192f-498a-4876-b19f-fe7a1bc9bd1c.png",
+        "https://vkplay.ru/hotbox/showcase/gamehighlight/pic/1a274927-79f9-4e46-9dc7-459b884011d9.png",
+        "https://vkplay.ru/hotbox/showcase/gamehighlight/pic/055417d7-a138-4db8-b89f-6e1695767252.png",
+        "https://vkplay.ru/hotbox/showcase/gamehighlight/pic/aaeb20d8-a0f0-4348-a03a-7873c950b380.png"
+
+
+    ]
+    
 }
 ];
 
