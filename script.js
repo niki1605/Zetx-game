@@ -47,6 +47,24 @@ const gamesData = [
         "https://gameforstore.hb.ru-msk.vkcloud-storage.ru/%D0%92%D0%B8%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D0%BD%D0%B0%20%D0%BC%D0%B5%D0%BC%D0%BE%D0%B2/scrin1.png"
     ]
     
+},
+     {
+    id: 4,
+    title: "Dog Apple",
+    description: "Вы попали в лес мемов! Вас заставили собирать яблоки, и на вас напал ходячий мем.",
+    category: "adventure",
+    platform: "pc",
+    image: "https://vkplay.ru/hotbox/showcase/gamelocale/picture/44794e56-ed2f-430c-a82d-ff2c272a6f12.jpeg",
+    url: "https://vkplay.ru/play/game/dog-apple",
+    icon: "https://gameforstore.hb.ru-msk.vkcloud-storage.ru/mem%20clicker/ikonka.jpg",
+    screenshots: [
+        "https://vkplay.ru/pre_1068x600_resize/hotbox/showcase/gamehighlight/pic/e06455d0-e9c0-47f1-b524-82991ddb1a28.png?quality=85&format=webp",
+        "https://vkplay.ru/pre_1068x600_resize/hotbox/showcase/gamehighlight/pic/94ba2413-f916-4383-b6fb-73cdeac7b482.png?quality=85&format=webp",
+        "https://vkplay.ru/pre_1068x600_resize/hotbox/showcase/gamehighlightdraft/pic/e9c7a052-94e5-482a-98b3-30b314642f23.jpeg?quality=85&format=webp",
+        "https://vkplay.ru/pre_1068x600_resize/hotbox/showcase/gamehighlight/pic/64fe9394-3350-40b6-b9b5-84ca96f553f2.png?quality=85&format=webp"
+
+    ]
+    
 }
 ];
 
