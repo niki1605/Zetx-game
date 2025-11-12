@@ -72,6 +72,25 @@ const allGamesData = {
     ],
     developer: "Txxicu Team",
     landscapeScreenshots: true, // Портретные скриншоты
+},
+5: {
+
+ id: 5,
+    title: "Создай игру Тебе сюда",
+    description: "Это конструктор для разработки игр, где можно не только сделать свою игру, но и поиграть в другие игры разработчиков.",
+    category: "simulation",
+    platform: "all",
+    image: "https://gameforstore.hb.ru-msk.vkcloud-storage.ru/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%B9%20%D0%B8%D0%B3%D1%80%D1%83%20%D0%A2%D0%B5%D0%B1%D0%B5%20%D1%81%D1%8E%D0%B4%D0%B0/%D0%BE%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0%20.jpg",
+    url: "https://yandex.ru/games/app/458320",
+    icon: "https://gameforstore.hb.ru-msk.vkcloud-storage.ru/mem%20clicker/ikonka.jpg",
+    screenshots: [
+        "https://gameforstore.hb.ru-msk.vkcloud-storage.ru/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%B9%20%D0%B8%D0%B3%D1%80%D1%83%20%D0%A2%D0%B5%D0%B1%D0%B5%20%D1%81%D1%8E%D0%B4%D0%B0/scrin1.jpg",
+        "https://gameforstore.hb.ru-msk.vkcloud-storage.ru/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%B9%20%D0%B8%D0%B3%D1%80%D1%83%20%D0%A2%D0%B5%D0%B1%D0%B5%20%D1%81%D1%8E%D0%B4%D0%B0/scrin2.jpg"
+
+
+    ],
+ developer: "Browserplay",
+    landscapeScreenshots: true, // Портретные скриншоты
 }
 
 };
@@ -176,8 +195,7 @@ function getPlatformName(platformKey) {
     const platforms = {
         'mobile': '📱 Мобильная',
         'pc': '💻 PC',
-        'web': '🌐 Веб',
-        'console': '🎮 Консоль'
+        'all': '📱 💻  Моб и пк',
     };
     return platforms[platformKey] || 'Другая';
 }
