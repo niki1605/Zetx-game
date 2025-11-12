@@ -255,7 +255,8 @@ function getCategoryName(categoryKey) {
         'rpg': 'RPG',
         'simulation': 'Симулятор',
         'sports': 'Спорт',
-        'casual': 'Казуальная'
+        'casual': 'Казуальная',
+        'horror': 'Хоррор'
     };
     return categories[categoryKey] || 'Другое';
 }
