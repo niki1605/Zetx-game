@@ -41,13 +41,13 @@ const allGamesData = {
     description: "Викторина мемов это игра про всеми нами любимые мемы, тут можно как и вспомнить бессмертную классику так и проверить знание на новые мемы. Так же в игре есть пасхалки которые будут прятаться в неправильных ответах. Качай игру и повеселись.",
     category: "casual",
     platform: "mobile",
-    image: "https://gameforstore.hb.ru-msk.vkcloud-storage.ru/%D0%92%D0%B8%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D0%BD%D0%B0%20%D0%BC%D0%B5%D0%BC%D0%BE%D0%B2/%D0%BE%D0%B1%D0%BB%D0%BE%D1%88%D0%BA%D0%B0.jpg",
+    image: "https://gameforstore.hb.ru-msk.vkcloud-storage.ru/%20%D0%92%D0%B8%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D0%BD%D0%B0%20%D0%BC%D0%B5%D0%BC%D0%BE%D0%B2/%D0%BE%D0%B1%D0%BB%D0%BE%D1%88%D0%BA%D0%B0.jpg",
     url: "https://www.rustore.ru/catalog/app/com.zetxplay.Memkliker",
     icon: "https://gameforstore.hb.ru-msk.vkcloud-storage.ru/mem%20clicker/ikonka.jpg",
     screenshots: [
-        "https://gameforstore.hb.ru-msk.vkcloud-storage.ru/%D0%92%D0%B8%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D0%BD%D0%B0%20%D0%BC%D0%B5%D0%BC%D0%BE%D0%B2/scrin3%20%282%29.png",
-        "https://gameforstore.hb.ru-msk.vkcloud-storage.ru/%D0%92%D0%B8%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D0%BD%D0%B0%20%D0%BC%D0%B5%D0%BC%D0%BE%D0%B2/scrin2.jpg",
-        "https://gameforstore.hb.ru-msk.vkcloud-storage.ru/%D0%92%D0%B8%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D0%BD%D0%B0%20%D0%BC%D0%B5%D0%BC%D0%BE%D0%B2/scrin1.png"
+        "https://gameforstore.hb.ru-msk.vkcloud-storage.ru/%20%D0%92%D0%B8%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D0%BD%D0%B0%20%D0%BC%D0%B5%D0%BC%D0%BE%D0%B2/scrin1.png",
+        "https://gameforstore.hb.ru-msk.vkcloud-storage.ru/%20%D0%92%D0%B8%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D0%BD%D0%B0%20%D0%BC%D0%B5%D0%BC%D0%BE%D0%B2/scrin2.jpg",
+        "https://gameforstore.hb.ru-msk.vkcloud-storage.ru/%20%D0%92%D0%B8%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D0%BD%D0%B0%20%D0%BC%D0%B5%D0%BC%D0%BE%D0%B2/scrin3%20%282%29.png"
     ],
     developer: "Zetx play",
     landscapeScreenshots: true, // Портретные скриншоты
