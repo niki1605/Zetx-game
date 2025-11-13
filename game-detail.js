@@ -110,7 +110,7 @@ const allGamesData = {
 
 
     ],
- developer: "Browserplay",
+ developer: "Zetx play",
     landscapeScreenshots: true, // Портретные скриншоты
    // donationIframe: '<iframe src="https://yoomoney.ru/quickpay/fundraise/button?billNumber=145K4U2FG4A.240723&" width="330" height="50" frameborder="0" allowtransparency="true" scrolling="no"></iframe>'
 
