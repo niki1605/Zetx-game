@@ -72,6 +72,7 @@ const allGamesData = {
     ],
     developer: "Txxicu Team",
     landscapeScreenshots: true, // Портретные скриншоты
+    donationIframe: ''
 },
 5: {
 
@@ -91,6 +92,7 @@ const allGamesData = {
     ],
  developer: "Browserplay",
     landscapeScreenshots: true, // Портретные скриншоты
+    donationIframe: ''
 },
 6:{
 
@@ -112,7 +114,60 @@ const allGamesData = {
     ],
  developer: "Zetx play",
     landscapeScreenshots: true, // Портретные скриншоты
-   // donationIframe: '<iframe src="https://yoomoney.ru/quickpay/fundraise/button?billNumber=145K4U2FG4A.240723&" width="330" height="50" frameborder="0" allowtransparency="true" scrolling="no"></iframe>'
+    donationIframe: ''
+
+},
+    7: {
+    id: 7,
+    title: "Tactical Field",
+    description: `Tactical Field: Где победа - это продуманный шаг! ⚔️🌎
+
+Добро пожаловать в Tactical Field – ваш следующий уровень тактического экшена! Представьте масштабные сражения, обогащенные глубокой тактикой, свободой выбора и инновационными фишками. Это не просто перестрелка – это современная война.
+
+🔥 Что Вас Ждет?
+Грандиозные Битвы: Сражайтесь на огромных, детализированных картах – от заброшенного зловещего госпиталя и разрушенных городов пустыни до штурма секретного острова с авианосца!
+
+Свобода Выбора: PvP, PvE или PvPvE? Создавайте свой идеальный бой! Настраивайте матчи под свои правила: добавляйте ИИ-противников, выбирайте режимы, устанавливайте параметры. Полный контроль – ваши возможности.
+
+Тактическое Богатство: Мастерски используйте различное снаряжение, продумывайте роли (классы с пресетами экипировки для быстрой смены), управляйте наземной техникой (БРДМ-2, бронированные дроны-«роверы») и доминируйте с воздуха.
+
+🎮Инновационный Геймплей
+Режим «Спутник»: Отдавайте приказы и прикрывайте союзников из космоса.
+
+Дроновая Война: Разведка и атака с помощью FPV-дронов, включая вооруженные «роверы».
+
+Продвинутая Стрельба: Инновационная система баллистики и глубокая кастомизация оружия (лазеры, фонари, глушители, прицелы и многое другое!).
+
+Эпические Разрушения: Реалистичная физика уничтожения техники с деформацией и разлетом обломков.
+
+Арсенал и Экипировка: Широкий выбор оружия (от дробовиков до легендарной СВД), гранат (дымовых, светошумовых, токсичных, осколочных, зажигательных) и тактических модулей (глушилки, C4 и многое другое).
+
+Для Всех Игроков: Полная поддержка геймпадов и удобный, переработанный интерфейс с детализированной статистикой.
+
+Надежная Инфраструктура: Собственные серверы, продвинутый античит и система достижений для самых умелых бойцов.
+
+🏆 Признанное Качество
+Победитель фестиваля видеоигр ВШЭ и победитель в номинации «Выбор игроков» Лаборатории VK Play – наше движение в правильном направлении подтверждено!
+
+ 
+
+Tactical Field – это не просто шутер. Это песочница тактической войны, где ваши решения, командная работа и умение использовать все инструменты на поле боя решают исход грандиозных битв. Готовы ли вы к такому уровню свободы и глубины?`,
+    category: "action",
+    platform: "pc",
+    image: "https://vkplay.ru/hotbox/showcase/gamelocale/picture_horizontal/dcac998e-00f3-4c18-b02f-213d55cd4bd2.jpg",
+    url: "https://vkplay.ru/play/game/tactical-field",
+    icon: "https://gameforstore.hb.ru-msk.vkcloud-storage.ru/mem%20clicker/ikonka.jpg",
+    screenshots: [
+        "https://vkplay.ru/hotbox/showcase/gamehighlight/pic/7d1c0010-6de8-4f98-972f-40a935576984.png",
+        "https://vkplay.ru/hotbox/showcase/gamehighlight/pic/84910b12-77c1-415e-a6de-d2e3825ca902.png",
+        "https://vkplay.ru/hotbox/showcase/gamehighlightdraft/pic/2d513f28-884d-4a06-a1d4-79e39f674ced.jpeg",
+        "https://vkplay.ru/hotbox/showcase/gamehighlight/pic/3015d92f-db4c-4d79-ab38-da051c21377b.png"
+
+
+    ],
+     developer: "NGame,  Corp.",
+    landscapeScreenshots: true, // Портретные скриншоты
+    donationIframe: '<iframe src="https://yoomoney.ru/quickpay/fundraise/button?billNumber=1E6SHIBG5SH.251122&" width="330" height="50" frameborder="0" allowtransparency="true" scrolling="no"></iframe>​'
 
 }
 
@@ -120,7 +175,7 @@ const allGamesData = {
 
 // Функция загрузки деталей игры
 function loadGameDetails() {
-    const gameContainer = document.getElementById('game-detail-container');
+          const gameContainer = document.getElementById('game-detail-container');
     
     if (!gameContainer) return;
     
@@ -144,6 +199,27 @@ function loadGameDetails() {
     // Определяем класс для скриншотов в зависимости от ориентации
     const screenshotClass = game.landscapeScreenshots ? 'screenshot-landscape' : 'screenshot-portrait';
     
+    // Функция для форматирования описания
+    const formattedDescription = formatDescription(game.description || 'Описание отсутствует');
+    
+    // Определяем контент для панели поддержки
+    let donationContent = '';
+    if (game.donationIframe && game.donationIframe.trim() !== '') {
+        // Если есть HTML код для поддержки
+        donationContent = `
+            <div class="donation-html-container">
+                ${game.donationIframe}
+            </div>
+        `;
+    } else {
+        // Если donationHtml пустой или отсутствует
+        donationContent = `
+            <div class="no-donation-message">
+                <p>Функция поддержки недоступна по желанию разработчика</p>
+            </div>
+        `;
+    }
+    
     gameContainer.innerHTML = `
         <div class="game-detail">
             <!-- Обложка игры -->
@@ -162,8 +238,9 @@ function loadGameDetails() {
                     </div>
                 </div>
                 
-                <p class="game-description">${game.description || 'Описание отсутствует'}</p>
-                
+                <div class="game-description formatted-text">
+                    ${formattedDescription}
+                </div>
                 
                 <!-- Кнопка перейти к игре -->
                 <div class="game-actions">
@@ -191,12 +268,61 @@ function loadGameDetails() {
             <div class="donation-panel">
                 <h3>Поддержать разработчика</h3>
                 <p>Если вам понравилась игра, вы можете поддержать разработчика</p>
-                <div class="donation-iframe-container" id="donation-container">
-                    ${game.donationIframe || '<p class="no-donation">Поддержка для этой игры недоступна</p>'}
-                </div>
+                ${donationContent}
             </div>
         </div>
     `;
+    
+    // Добавляем обработчик для сообщения о недоступности поддержки
+    const noDonationMessage = document.querySelector('.no-donation-message');
+    if (noDonationMessage) {
+        noDonationMessage.addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Функция поддержки недоступна по желанию самого разработчика');
+        });
+    }
+}
+
+// Функция для форматирования описания с поддержкой HTML тегов
+function formatDescription(text) {
+    if (!text) return '';
+    
+    // Заменяем переносы строк на <br>
+    let formatted = text.replace(/\n/g, '<br>');
+    
+    // Простые HTML теги для форматирования
+    formatted = formatted
+        // Жирный текст
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/__(.*?)__/g, '<strong>$1</strong>')
+        
+        // Курсив
+        .replace(/\*(.*?)\*/g, '<em>$1</em>')
+        .replace(/_(.*?)_/g, '<em>$1</em>')
+        
+        // Подчеркивание
+        .replace(/~~(.*?)~~/g, '<u>$1</u>')
+        
+        // Зачеркивание
+        .replace(/--(.*?)--/g, '<s>$1</s>')
+        
+        // Цветной текст
+        .replace(/\[red\](.*?)\[\/red\]/g, '<span class="text-red">$1</span>')
+        .replace(/\[blue\](.*?)\[\/blue\]/g, '<span class="text-blue">$1</span>')
+        .replace(/\[green\](.*?)\[\/green\]/g, '<span class="text-green">$1</span>')
+        .replace(/\[yellow\](.*?)\[\/yellow\]/g, '<span class="text-yellow">$1</span>')
+        .replace(/\[orange\](.*?)\[\/orange\]/g, '<span class="text-orange">$1</span>')
+        .replace(/\[purple\](.*?)\[\/purple\]/g, '<span class="text-purple">$1</span>')
+        
+        // Списки
+        .replace(/^- (.*?)(?=\n|$)/gm, '<li>$1</li>')
+        .replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>')
+        
+        // Заголовки
+        .replace(/^# (.*?)$/gm, '<h3 class="description-heading">$1</h3>')
+        .replace(/^## (.*?)$/gm, '<h4 class="description-subheading">$1</h4>');
+    
+    return formatted;
 }
 
 // Вспомогательные функции

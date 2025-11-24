@@ -100,7 +100,27 @@ const gamesData = [
 
     ]
     
+},
+     {
+    id: 7,
+    title: "Tactical Field",
+    description: "Tactical Field: Где победа - это продуманный шаг! ⚔️🌎Добро пожаловать в Tactical Field – ваш следующий уровень тактического экшена! Представьте масштабные сражения, обогащенные глубокой тактикой, свободой выбора и инновационными фишками. Это не просто перестрелка – это современная война.",
+    category: "action",
+    platform: "pc",
+    image: "https://vkplay.ru/hotbox/showcase/gamelocale/picture_horizontal/dcac998e-00f3-4c18-b02f-213d55cd4bd2.jpg",
+    url: "https://vkplay.ru/play/game/tactical-field",
+    icon: "https://gameforstore.hb.ru-msk.vkcloud-storage.ru/mem%20clicker/ikonka.jpg",
+    screenshots: [
+        "https://vkplay.ru/hotbox/showcase/gamehighlight/pic/7d1c0010-6de8-4f98-972f-40a935576984.png",
+        "https://vkplay.ru/hotbox/showcase/gamehighlight/pic/84910b12-77c1-415e-a6de-d2e3825ca902.png",
+        "https://vkplay.ru/hotbox/showcase/gamehighlightdraft/pic/2d513f28-884d-4a06-a1d4-79e39f674ced.jpeg",
+        "https://vkplay.ru/hotbox/showcase/gamehighlight/pic/3015d92f-db4c-4d79-ab38-da051c21377b.png"
+
+
+    ]
+    
 }
+
 ];
 
 // DOM элементы
