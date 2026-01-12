@@ -6,218 +6,272 @@
     <title>Mem clicker - Zetx Game</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Дополнительные стили для детальной страницы */
-        .game-detail {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        .game-cover {
-            margin-bottom: 30px;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px var(--shadow);
-        }
-        
-        .game-cover img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .game-main-info {
-            background: var(--secondary);
-            padding: 30px;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            box-shadow: 0 5px 15px var(--shadow);
-        }
-        
-        .game-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        
-        .game-title {
-            font-size: 2.5rem;
-            margin: 0;
-            color: var(--text);
-        }
-        
-        .game-meta {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-        
-        .game-category, .game-platform, .game-developer {
-            background: var(--primary);
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-        
-        .game-description {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin-bottom: 30px;
-            color: #e3f2fd;
-        }
-        
-        .game-actions {
-            text-align: center;
-        }
-        
-        .game-screenshots {
-            margin-bottom: 30px;
-        }
-        
-        .game-screenshots h2 {
-            margin-bottom: 20px;
-            font-size: 1.8rem;
-            color: var(--text);
-        }
-        
-        .screenshots-grid {
-            
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            
-        }
-        
-        .screenshot-item {
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px var(--shadow);
-            transition: transform 0.3s;
-        }
-        
-        .screenshot-item:hover {
-            transform: translateY(-5px);
-        }
-        
-        .screenshot-item img {
-            width: 300px;
-            height: 500px;
-
-        }
-        
-        .donation-panel {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-    padding: 30px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 5px 15px var(--shadow);
-}
-
-.donation-panel h3 {
-    margin-bottom: 10px;
-    font-size: 1.5rem;
-}
-
-.donation-panel p {
-    margin-bottom: 20px;
-    color: #e3f2fd;
-}
-
-.donation-iframe-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 60px;
-    margin: 0 auto;
-}
-
-.no-donation {
-    color: #bbdefb;
-    font-style: italic;
-}
-
-/* Адаптивность для iframe */
-@media (max-width: 480px) {
-    .donation-iframe-container iframe {
-        width: 100% !important;
-        max-width: 300px;
+            /* Дополнительные стили для детальной страницы */
+    .game-detail {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .game-cover {
+        margin-bottom: 30px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px var(--shadow);
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .game-cover img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        max-width: 100%;
+        display: block;
+    }
+    
+    .game-main-info {
+        background: var(--secondary);
+        padding: 30px;
+        border-radius: 12px;
+        margin-bottom: 30px;
+        box-shadow: 0 5px 15px var(--shadow);
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .game-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+        gap: 15px;
+        width: 100%;
+    }
+    
+    .game-title {
+        font-size: 2.5rem;
+        margin: 0;
+        color: var(--text);
+        word-break: break-word;
+        width: 100%;
+    }
+    
+    .game-meta {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+    .game-category, .game-platform, .game-developer {
+        background: var(--primary);
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        white-space: nowrap;
+    }
+    
+    .game-description {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 30px;
+        color: #e3f2fd;
+        width: 100%;
+    }
+    
+    .game-actions {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .game-screenshots {
+        margin-bottom: 30px;
+        width: 100%;
+    }
+    
+    .game-screenshots h2 {
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+        color: var(--text);
+        width: 100%;
+    }
+    
+    .screenshots-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        width: 100%;
+    }
+    
+    .screenshot-item {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px var(--shadow);
+        transition: transform 0.3s;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .screenshot-item:hover {
+        transform: translateY(-5px);
+    }
+    
+    .screenshot-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+        max-width: 100%;
     }
     
     .donation-panel {
-        padding: 20px;
+        background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+        padding: 30px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 5px 15px var(--shadow);
+        width: 100%;
+        box-sizing: border-box;
     }
-}
-        @media (max-width: 768px) {
-            .game-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .game-title {
-                font-size: 2rem;
-            }
-            
-            .game-cover img {
-                height: 250px;
-            }
-            
-            .screenshots-grid {
-                grid-template-columns: 1fr;
-            }
+    
+    .donation-panel h3 {
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+    }
+    
+    .donation-panel p {
+        margin-bottom: 20px;
+        color: #e3f2fd;
+    }
+    
+    /* Исправления для мобильных в game.html */
+    @media (max-width: 768px) {
+        .game-detail {
+            padding: 10px;
+            max-width: 100vw;
+            overflow-x: hidden;
         }
-
-
         
-        .screenshots-grid.screenshot-landscape {
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    gap: 20px;
-}
-
-.screenshots-grid.screenshot-portrait {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 15px;
-}
-
-.screenshot-landscape .screenshot-item img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
-
-.screenshot-portrait .screenshot-item img {
-    width: 300px;
-            height: 500px;
-    object-fit: cover;
-}
-
-/* Адаптивность для альбомных скриншотов */
-@media (max-width: 768px) {
-    .screenshots-grid.screenshot-landscape {
-        grid-template-columns: 1fr;
-        gap: 15px;
+        .game-cover {
+            margin: 0 -10px 20px -10px;
+            width: calc(100% + 20px);
+            border-radius: 0;
+        }
+        
+        .game-cover img {
+            height: 250px;
+            object-fit: contain;
+            background: var(--secondary);
+        }
+        
+        .game-main-info {
+            padding: 20px 15px;
+            margin: 0 -5px 20px -5px;
+            width: calc(100% + 10px);
+        }
+        
+        .game-title {
+            font-size: 1.8rem;
+            text-align: center;
+        }
+        
+        .game-meta {
+            justify-content: center;
+        }
+        
+        .screenshots-grid {
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin: 0 -5px;
+            width: calc(100% + 10px);
+        }
+        
+        .screenshot-item {
+            margin: 0 5px;
+        }
+        
+        .screenshot-item img {
+            height: 180px;
+            object-fit: contain;
+            background: var(--secondary);
+        }
+        
+        .donation-panel {
+            padding: 20px 15px;
+            margin: 0 -5px;
+            width: calc(100% + 10px);
+        }
+        
+        .donation-html-container iframe {
+            width: 100% !important;
+            max-width: 100%;
+            transform: scale(0.9);
+            transform-origin: center;
+        }
     }
     
-    .screenshot-landscape .screenshot-item img {
-        height: 250px;
+    @media (max-width: 480px) {
+        .game-cover {
+            margin: 0 -5px 15px -5px;
+            width: calc(100% + 10px);
+        }
+        
+        .game-cover img {
+            height: 200px;
+        }
+        
+        .game-main-info {
+            padding: 15px;
+        }
+        
+        .game-title {
+            font-size: 1.6rem;
+        }
+        
+        .game-category, .game-platform, .game-developer {
+            font-size: 0.8rem;
+            padding: 6px 12px;
+        }
+        
+        .screenshots-grid {
+            gap: 10px;
+        }
+        
+        .screenshot-item img {
+            height: 160px;
+        }
+        
+        .donation-panel {
+            padding: 15px;
+        }
+        
+        .donation-panel h3 {
+            font-size: 1.3rem;
+        }
+        
+        .donation-html-container iframe {
+            transform: scale(0.85);
+        }
     }
     
-    .screenshot-portrait .screenshot-item img {
-        height: 400px;
+    @media (max-width: 360px) {
+        .game-cover img {
+            height: 180px;
+        }
+        
+        .screenshot-item img {
+            height: 140px;
+        }
+        
+        .donation-html-container iframe {
+            transform: scale(0.8);
+        }
     }
-}
-
-@media (max-width: 480px) {
-    .screenshot-landscape .screenshot-item img {
-        height: 200px;
-    }
-    
-    .screenshot-portrait .screenshot-item img {
-        height: 300px;
-    }
-}
     </style>
 </head>
 <body>
@@ -225,8 +279,10 @@
     <header class="header">
         <div class="container">
             <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
                 <h1>Zetx Game</h1>
                 <span>Агрегатор игр</span>
+            </a>
             </div>
             <nav class="nav">
                 <a href="index.html" class="nav-link">← Назад к каталогу</a>

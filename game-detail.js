@@ -175,7 +175,7 @@ Tactical Field – это не просто шутер. Это песочниц�
 
 // Функция загрузки деталей игры
 function loadGameDetails() {
-          const gameContainer = document.getElementById('game-detail-container');
+const gameContainer = document.getElementById('game-detail-container');
     
     if (!gameContainer) return;
     
@@ -190,16 +190,19 @@ function loadGameDetails() {
                 <a href="index.html" class="btn btn-primary">Вернуться к каталогу</a>
             </div>
         `;
+        // Устанавливаем заголовок по умолчанию
+        document.title = "Игра не найдена - Zetx Game";
         return;
     }
     
     const game = allGamesData[gameId];
+    
+    // Устанавливаем заголовок страницы
+    document.title = `${game.title} - Zetx Game`;
+    
+    // Остальной код функции остается без изменений...
     const screenshots = Array.isArray(game.screenshots) ? game.screenshots : [];
-    
-    // Определяем класс для скриншотов в зависимости от ориентации
     const screenshotClass = game.landscapeScreenshots ? 'screenshot-landscape' : 'screenshot-portrait';
-    
-    // Функция для форматирования описания
     const formattedDescription = formatDescription(game.description || 'Описание отсутствует');
     
     // Определяем контент для панели поддержки
